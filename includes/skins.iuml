@@ -1,0 +1,135 @@
+
+skinparam backgroundColor #FFFFFF
+
+
+skinparam sequence {
+
+        ActorBorderColor #000000
+   
+        ArrowColor #919871 
+        ArrowFontSize 8
+        ArrowFontStyle plain
+        ArrowFontName Arial
+        
+        LifeLineBorderColor #919871
+        LifeLineBackgroundColor #EEEBDC
+
+        ParticipantBorderColor #919871
+        ParticipantBackgroundColor #EEEBDC
+        ParticipantFontName Arial
+        ParticipantFontSize 10
+        ParticipantFontColor #000000
+
+        ActorBackgroundColor #EEEBDC
+        ActorFontColor #000000
+        ActorFontSize 10
+        ActorFontName Arial
+         
+}
+
+skinparam class {
+
+	ArrowFontColor #000000
+	ArrowFontSize 10
+	ArrowFontStyle plain
+	ArrowFontName Arial
+	
+	AttributeFontColor #000000
+	AttributeFontSize 10
+	AttributeIconSize 11
+	AttributeFontStyle plain
+	AttributeFontName Arial
+
+	FontColor #000000
+	FontSize 11
+	FontStyle plain
+	FontName Arial
+
+	StereotypeFontColor #000000
+	StereotypeFontSize 10
+	StereotypeFontStyle plain
+	StereotypeFontName Arial
+
+	BackgroundColor #EEEBDC
+ 	ArrowColor #919871
+ 	BorderColor #919871
+ 	
+ }
+ 
+skinparam component {
+ 
+	FontSize 11 
+ 	BackgroundColor #EEEBDC
+ 	InterfaceBackgroundColor white
+	InterfaceBorderColor black
+ 	BorderColor #919871
+	ArrowColor black
+ 	ArrowFontColor #777777
+ 	FontName Arial
+ 	ArrowFontName Arial
+	
+	
+
+}
+
+skinparam package {
+	FontColor black
+	FontSize 11
+	FontStyle plain
+	FontName Arial
+}
+
+skinparam state {
+	BackgroundColor #EEEBDC
+	BorderColor #919871
+	ArrowColor  black
+	
+
+	FontColor black
+	FontSize 11
+	FontStyle plain
+	FontName Arial
+
+	ArrowFontColor black
+	ArrowFontSize 11
+	ArrowFontStyle plain
+	ArrowFontName Arial
+	AttributeFontColor black
+	AttributeFontSize 11
+	AttributeFontStyle plain
+	AttributeFontName Arial
+	
+}
+
+skinparam activity {
+	
+	ArrowColor black
+	BackgroundColor #EEEBDC
+	BorderColor #919871
+	StartColor black
+	EndColor black
+	BarColor #919871
+	
+	FontColor black
+	FontSize 11
+	FontStyle plain
+	FontName Arial
+
+	ArrowFontColor black
+	ArrowFontSize 11
+	ArrowFontStyle plain
+	ArrowFontName Arial
+
+}
+
+skinparam usecase {
+	
+	BackgroundColor #EEEBDC
+ 	InterfaceBackgroundColor white
+	InterfaceBorderColor black
+ 	BorderColor #919871
+	ArrowColor black
+	ActorBorderColor #919871
+	ActorFontName Courier
+
+}
