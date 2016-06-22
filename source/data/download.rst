@@ -1,5 +1,5 @@
-Discovery
----------
+Download
+--------
 
 Download request principles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
