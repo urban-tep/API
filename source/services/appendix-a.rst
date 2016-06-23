@@ -1,4 +1,4 @@
-.. _appendix-A:
+.. _appendix-a:
 
 Appendix A : Sample WPS requests & responses
 =============================================

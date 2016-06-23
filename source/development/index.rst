@@ -5,7 +5,6 @@ Development
 .. toctree::
    :maxdepth: 2
 
-
 Service Descriptor XML
 ^^^^^^^^^^^^^^^^^^^^^^
 

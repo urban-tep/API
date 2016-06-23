@@ -2,6 +2,9 @@
 PUMA Provider
 =============
 
+.. toctree::
+   :maxdepth: 2
+
 Services Discovery
 ^^^^^^^^^^^^^^^^^^
 

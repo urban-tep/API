@@ -2,6 +2,9 @@
 IT4I Provider
 =============
 
+.. toctree::
+   :maxdepth: 2
+
 Services Discovery
 ^^^^^^^^^^^^^^^^^^
 

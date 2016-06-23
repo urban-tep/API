@@ -2,6 +2,9 @@
 Brockmann Consult Provider
 ==========================
 
+.. toctree::
+   :maxdepth: 2
+
 Services Discovery
 ^^^^^^^^^^^^^^^^^^
 
@@ -134,8 +137,26 @@ Processing Execution
 Result Retrieval
 ^^^^^^^^^^^^^^^^
 
-- WPS retrieveResult
+- WPS getStatus request
+
+  The URL is generated automatically by the WPS and is available in the asynchronous execute response. Sample getStatus request URL:
+  ::
+    http://www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&Request=GetStatus&JobId=20160622085915_L2Plus_192611589de0f3
+
+
+- WPS getStatus response
+
+  Successful processing will return the same response ase the WPS execute response (final). The sample XML is available in :ref:`ExecuteResponseFinal`.
+
+
 - Download
+
+  The download of the product(s) is via HTTP protocol by following the given link(s) in the final execute response.
+
+- Result metadata
+
+  Each process that produces output(s) comes with result metadata file. The URL to this file is available in the execute response (final). A sample
+  metadata file is available in :ref:`ResultMetadataFile`.
 
 
 

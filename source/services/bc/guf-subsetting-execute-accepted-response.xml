@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <wps:ExecuteResponse serviceInstance="http://www.brockmann-consult.de/bc-wps/wps/calvalus?"
-         statusLocation="http://bc-wps:9080/bc-wps/wps/calvalus?Service=WPS&amp;Request=GetStatus&amp;JobId=20160622085915_L2Plus_192611589de0f3"
+         statusLocation="http://www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&amp;Request=GetStatus&amp;JobId=20160622085915_L2Plus_192611589de0f3"
          service="WPS" version="1.0.0" xml:lang="en"
          xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd"
          xmlns:ows="http://www.opengis.net/ows/1.1"

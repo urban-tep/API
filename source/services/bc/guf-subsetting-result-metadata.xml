@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title type="text">Urban TEP catalogue entry</title>
+    <id>http://bc-wps:9080/bc-wps/wps/calvalus</id>
+    <updated>2016-06-22T09:09:25.609+02:00</updated>
+    <link rel="profile" href="http://www.opengis.net/spec/owc-atom/1.0/req/core"
+          title="This file is compliant with version 1.0 of OGC Context"/>
+    <entry>
+        <id>TEP Subset test/urban1/20160622085915_L2Plus_192611589de0f3</id>
+        <title type="text">TEP Subset test</title>
+        <content type="text">
+            Subset of /calvalus/auxiliary/urban-footprint/tep-dlr-urban-mask-75m/guf_75m_.*.tif
+        </content>
+        <author>
+            <name>Brockmann Consult GmbH</name>
+        </author>
+        <publisher xmlns="http://purl.org/dc/elements/1.1/">ESA Urban TEP</publisher>
+        <updated>2016-06-22T09:09:25.609+02:00</updated>
+        <parentIdentifier xmlns="http://purl.org/dc/elements/1.1/">
+            http://bc-wps:9080/bc-wps/staging/urban1
+        </parentIdentifier>
+        <where xmlns="http://www.georss.org/georss/10"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Polygon xmlns="http://www.opengis.net/gml">
+                <exterior>
+                    <LinearRing>
+                        <posList srsDimension="2">100 -10 100 0 110 0 110 -10 100 -10</posList>
+                    </LinearRing>
+                </exterior>
+            </Polygon>
+        </where>
+        <date xmlns="http://purl.org/dc/elements/1.1/">2016-05-23/2016-05-23</date>
+        <link rel="enclosure" href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3" title="TEP Subset test"/>
+        <EarthObservation xmlns="http://www.opengis.net/sar/2.1"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <boundedBy xmlns="http://www.opengis.net/gml/3.2" xsi:nil="true"/>
+            <phenomenonTime xmlns="http://www.opengis.net/om/2.0">
+                <TimePeriod xmlns="http://www.opengis.net/gml/3.2">
+                    <beginPosition>2016-05-23</beginPosition>
+                    <endPosition>2016-05-23</endPosition>
+                </TimePeriod>
+            </phenomenonTime>
+            <observedProperty xmlns="http://www.opengis.net/om/2.0" xsi:nil="true"/>
+            <metaDataProperty xmlns="http://www.opengis.net/eop/2.1">
+                <EarthObservationMetaData>
+                    <identifier>TEP Subset test/urban1/20160622085915_L2Plus_192611589de0f3</identifier>
+                    <parentIdentifier>http://bc-wps:9080/bc-wps/staging/urban1</parentIdentifier>
+                    <productType>GUF</productType>
+                    <processing>
+                        <ProcessingInformation>
+                            <processingCenter>Brockmann Consult GmbH</processingCenter>
+                            <processingDate>2016-06-22T09:09:25.609+02:00</processingDate>
+                            <method>Subset Processing</method>
+                            <processorName>Subset</processorName>
+                            <processorVersion>1.0</processorVersion>
+                            <processingLevel>L2Plus</processingLevel>
+                            <nativeProductFormat>NetCDF4</nativeProductFormat>
+                        </ProcessingInformation>
+                    </processing>
+                </EarthObservationMetaData>
+            </metaDataProperty>
+            <result xmlns="http://www.opengis.net/om/2.0">
+                <EarthObservationResult xmlns="http://www.opengis.net/eop/2.1">
+                    <boundedBy xmlns="http://www.opengis.net/gml/3.2" xsi:nil="true"/>
+                    <product>
+                        <ProductInformation>
+                            <fileName>
+                                <d7p1:ServiceReference d7p1:type="simple"
+                                       d7p2:href="http://bc-wps:9080/bc-wps/staging/L2_of_guf_75m_04_e105_n00_e110_s05_bC_8rl_AF01.nc"
+                                       d7p2:title="simple"
+                                       xmlns="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p1="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p2="http://www.w3.org/1999/xlink">
+                                    <d7p1:Identifier>L2_of_guf_75m_04_e105_n00_e110_s05_bC_8rl_AF01.nc</d7p1:Identifier>
+                                    <d7p1:Format>NetCDF4</d7p1:Format>
+                                </d7p1:ServiceReference>
+                            </fileName>
+                            <size>327767</size>
+                        </ProductInformation>
+                    </product>
+                    <product>
+                        <ProductInformation>
+                            <fileName>
+                                <d7p1:ServiceReference d7p1:type="simple"
+                                       d7p2:href="http://bc-wps:9080/bc-wps/staging/TEP_Subset_test.zip"
+                                       d7p2:title="simple"
+                                       xmlns="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p1="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p2="http://www.w3.org/1999/xlink">
+                                    <d7p1:Identifier>TEP_Subset_test.zip</d7p1:Identifier>
+                                    <d7p1:Format>ZIP</d7p1:Format>
+                                </d7p1:ServiceReference>
+                            </fileName>
+                            <size>1490542</size>
+                        </ProductInformation>
+                    </product>
+                    <product>
+                        <ProductInformation>
+                            <fileName>
+                                <d7p1:ServiceReference d7p1:type="simple"
+                                       d7p2:href="http://bc-wps:9080/bc-wps/staging/L2_of_guf_75m_04_e100_s05_e105_s10_bC_8rl_AF01.nc"
+                                       d7p2:title="simple"
+                                       xmlns="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p1="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p2="http://www.w3.org/1999/xlink">
+                                    <d7p1:Identifier>L2_of_guf_75m_04_e100_s05_e105_s10_bC_8rl_AF01.nc</d7p1:Identifier>
+                                    <d7p1:Format>NetCDF4</d7p1:Format>
+                                </d7p1:ServiceReference>
+                            </fileName>
+                            <size>193033</size>
+                        </ProductInformation>
+                    </product>
+                    <product>
+                        <ProductInformation>
+                            <fileName>
+                                <d7p1:ServiceReference d7p1:type="simple"
+                                       d7p2:href="http://bc-wps:9080/bc-wps/staging/L2_of_guf_75m_04_e100_n00_e105_s05_bC_8rl_AF01.nc"
+                                       d7p2:title="simple"
+                                       xmlns="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p1="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p2="http://www.w3.org/1999/xlink">
+                                    <d7p1:Identifier>L2_of_guf_75m_04_e100_n00_e105_s05_bC_8rl_AF01.nc</d7p1:Identifier>
+                                    <d7p1:Format>NetCDF4</d7p1:Format>
+                                </d7p1:ServiceReference>
+                            </fileName>
+                            <size>546504</size>
+                        </ProductInformation>
+                    </product>
+                    <product>
+                        <ProductInformation>
+                            <fileName>
+                                <d7p1:ServiceReference d7p1:type="simple"
+                                       d7p2:href="http://bc-wps:9080/bc-wps/staging/L2_of_guf_75m_04_e105_s05_e110_s10_bC_8rl_AF01.nc"
+                                       d7p2:title="simple"
+                                       xmlns="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p1="http://www.opengis.net/ows/2.0"
+                                       xmlns:d7p2="http://www.w3.org/1999/xlink">
+                                    <d7p1:Identifier>L2_of_guf_75m_04_e105_s05_e110_s10_bC_8rl_AF01.nc</d7p1:Identifier>
+                                    <d7p1:Format>NetCDF4</d7p1:Format>
+                                </d7p1:ServiceReference>
+                            </fileName>
+                            <size>687073</size>
+                        </ProductInformation>
+                    </product>
+                    <browse>
+                        <BrowseInformation>
+                            <fileName>$product.productQuickLookUrl</fileName>
+                        </BrowseInformation>
+                    </browse>
+                </EarthObservationResult>
+            </result>
+            <featureOfInterest xmlns="http://www.opengis.net/om/2.0">
+                <Footprint xmlns="http://www.opengis.net/eop/2.1">
+                    <boundedBy xmlns="http://www.opengis.net/gml/3.2" xsi:nil="true"/>
+                    <multiExtentOf>
+                        <MultiSurface xmlns="http://www.opengis.net/gml/3.2">
+                            <surfaceMembers>
+                                <Polygon>
+                                    <exterior>
+                                        <LinearRing>
+                                            <posList count="5" srsDimension="2">
+                                                100 -10 100 0 110 0 110 -10 100 -10
+                                            </posList>
+                                        </LinearRing>
+                                    </exterior>
+                                </Polygon>
+                            </surfaceMembers>
+                        </MultiSurface>
+                    </multiExtentOf>
+                </Footprint>
+            </featureOfInterest>
+        </EarthObservation>
+    </entry>
+</feed>
+
