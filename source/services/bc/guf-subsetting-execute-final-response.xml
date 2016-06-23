@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<wps:ExecuteResponse serviceInstance="http://www.brockmann-consult.de/bc-wps/wps/calvalus?"
+                     service="WPS" version="1.0.0" xml:lang="en"
+                     xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd"
+                     xmlns:ows="http://www.opengis.net/ows/1.1"
+                     xmlns:wps="http://www.opengis.net/wps/1.0.0"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <wps:Process wps:processVersion="1.0">
+        <ows:Identifier>urbantep-subsetting~1.0~Subset</ows:Identifier>
+        <ows:Title>urbantep-subsetting~1.0~Subset</ows:Title>
+    </wps:Process>
+    <wps:Status creationTime="2016-06-22T09:09:25.609+02:00">
+        <wps:ProcessSucceeded>The request has been processed successfully.</wps:ProcessSucceeded>
+    </wps:Status>
+    <wps:ProcessOutputs>
+        <wps:Output>
+            <ows:Identifier>productionResults</ows:Identifier>
+            <ows:Title>Production results</ows:Title>
+            <ows:Abstract>This is the URL link to the production result</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/L2_of_guf_75m_04_e105_n00_e110_s05_bC_8rl_AF01.nc" mimeType="application/octet-stream"/>
+        </wps:Output>
+        <wps:Output>
+            <ows:Identifier>productionResults</ows:Identifier>
+            <ows:Title>Production results</ows:Title>
+            <ows:Abstract>This is the URL link to the production result</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/TEP_Subset_test.zip" mimeType="application/octet-stream"/>
+        </wps:Output>
+        <wps:Output>
+            <ows:Identifier>productionResults</ows:Identifier>
+            <ows:Title>Production results</ows:Title>
+            <ows:Abstract>This is the URL link to the production result</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/L2_of_guf_75m_04_e100_s05_e105_s10_bC_8rl_AF01.nc" mimeType="application/octet-stream"/>
+        </wps:Output>
+        <wps:Output>
+            <ows:Identifier>productionResults</ows:Identifier>
+            <ows:Title>Production results</ows:Title>
+            <ows:Abstract>This is the URL link to the production result</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/L2_of_guf_75m_04_e100_n00_e105_s05_bC_8rl_AF01.nc" mimeType="application/octet-stream"/>
+        </wps:Output>
+        <wps:Output>
+            <ows:Identifier>productionResults</ows:Identifier>
+            <ows:Title>Production results</ows:Title>
+            <ows:Abstract>This is the URL link to the production result</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/L2_of_guf_75m_04_e105_s05_e110_s10_bC_8rl_AF01.nc" mimeType="application/octet-stream"/>
+        </wps:Output>
+        <wps:Output>
+            <ows:Identifier>resultMetadataFile</ows:Identifier>
+            <ows:Title>Result metadata file</ows:Title>
+            <ows:Abstract>This is the URL link to the result metadata file</ows:Abstract>
+            <wps:Reference href="http://bc-wps:9080/bc-wps/staging/urban1/20160622085915_L2Plus_192611589de0f3/TEP%20Subset%20test-metadata" mimeType="application/octet-stream"/>
+        </wps:Output>
+    </wps:ProcessOutputs>
+</wps:ExecuteResponse>
