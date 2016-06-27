@@ -2,6 +2,8 @@
 Services
 ========
 
+The following shows interface diagram of Urban TEP components.
+
 .. include:: component_diagram.rst
 
 .. toctree::
