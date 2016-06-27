@@ -8,6 +8,9 @@ Brockmann Consult Provider
 Services Discovery
 ^^^^^^^^^^^^^^^^^^
 
+This service is available for the portal to discover all the available services on the WPS. GetCapabilities call of `OGC WPS 1.0 <http://www.opengeospatial.org/standards/wps>`_ standard is used for this service.
+This service is invoked so that the portal has the information about services available for the users to use.
+
 - WPS getCapabilities request
 
   Sample getCapabilities request URL:
@@ -35,6 +38,11 @@ Services Discovery
 
 Service Description
 ^^^^^^^^^^^^^^^^^^^
+
+This service is used by the portal to inquire information about the available parameters of the services.
+The inquiry can be specific to a service or multiple services (defined by the *service_id*), or all the available services in the WPS.
+This service is invoked when the user has selected a particular service for a processing. The information that is returned as part of the DescribeProcess response
+is then displayed on the portal page in the format of a Form, for the users to fill in.
 
 - WPS describeProcess request
 
@@ -72,6 +80,8 @@ Service Description
 
 Processing Execution
 ^^^^^^^^^^^^^^^^^^^^
+
+This service is used by the portal to send a processing request to the WPS. The request shall be constructed based on the DescribeProcess response of the selected service.
 
 - WPS execute request
 
@@ -192,8 +202,12 @@ Processing Execution
   +--------------------------+---------------------------------------------------------------------------------+
 
 
-Result Retrieval
-^^^^^^^^^^^^^^^^
+Result Status & Retrieval
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are two parts of this service: status monitoring and result retrieval.
+The status monitoring allows the portal to monitor the status of each requested process. This service is invoked in a defined time interval set by the portal until the process is finished.
+The results are available as a HTTP URL and are included as a response of the GetStatus request (after the process has been finished).
 
 - WPS getStatus request
 
