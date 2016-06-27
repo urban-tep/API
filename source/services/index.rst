@@ -2,6 +2,8 @@
 Services
 ========
 
+.. include:: component_diagram.rst
+
 .. toctree::
    :maxdepth: 2
 
