@@ -12,6 +12,7 @@ Services Discovery
 
   Sample getCapabilities request URL:
   ::
+
     http://www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&Request=GetCapabilities
 
 
@@ -39,6 +40,7 @@ Service Description
 
   Sample describeProcess request URL:
   ::
+
     http://www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&Request=DescribeProcess&Version=1.0.0&Identifier=<service_id>
 
   Additional information:
@@ -80,27 +82,83 @@ Processing Execution
   +==========================+=================================================================================+
   | productionName           | a name to identify this request. The value entered here will be used            |
   |                          |                                                                                 |
-  |                          | as the result file name.                                                        |
+  |                          | as the result file name. *Sample value* :                                       |
+  |                          |                                                                                 |
+  |                          | - Milano GUF                                                                    |
+  |                          | - TEP Subset                                                                    |
   +--------------------------+---------------------------------------------------------------------------------+
   | inputDataSetName         | the value entered here is based on the option(s) listed in                      |
   |                          |                                                                                 |
-  |                          | describeProcess response.                                                       |
+  |                          | describeProcess response. *Sample value* :                                      |
+  |                          |                                                                                 |
+  |                          | - DLR GUF 12m Europe Tiles (Urban TEP)                                          |
+  |                          | - LC-CCI GUF 300m Global                                                        |
   +--------------------------+---------------------------------------------------------------------------------+
   | regionWKT                | the spatial range of the processing. There are two formats that are             |
   |                          |                                                                                 |
   |                          | supported: Polygon and Bounding box (refer to describeProcess                   |
   |                          |                                                                                 |
-  |                          | response for more information).                                                 |
+  |                          | response for more information). *Sample value* :                                |
+  |                          |                                                                                 |
+  |                          | - Polygon                                                                       |
+  |                          |   ::                                                                            |
+  |                          |                                                                                 |
+  |                          |      <wps:LiteralData>                                                          |
+  |                          |          POLYGON((100 -10,100 0,110 0,110 -10,100 -10))                         |
+  |                          |      </wps:LiteralData>                                                         |
+  |                          | - Bounding Box                                                                  |
+  |                          |   ::                                                                            |
+  |                          |                                                                                 |
+  |                          |      <wps:Data>                                                                 |
+  |                          |          <BoundingBoxData xmlns="http://www.opengis.net/ows/1.1">               |
+  |                          |              <LowerCorner xmlns="http://www.opengis.net/ows/1.1">               |
+  |                          |                  -12.83203125 23.56398712845123                                 |
+  |                          |              </LowerCorner>                                                     |
+  |                          |              <UpperCorner xmlns="http://www.opengis.net/ows/1.1">               |
+  |                          |                  11.953125 31.57853542647338                                    |
+  |                          |              </UpperCorner>                                                     |
+  |                          |          </BoundingBoxData>                                                     |
+  |                          |      </wps:Data>                                                                |
   +--------------------------+---------------------------------------------------------------------------------+
   | calvalus.l3.parameters   | calvalus-specific parameters for L3 processing. When required,                  |
   |                          |                                                                                 |
   |                          | it will be indicated in describeProcess response and with a sample              |
   |                          |                                                                                 |
-  |                          | values.                                                                         |
+  |                          | values. *Sample value* :                                                        |
+  |                          | ::                                                                              |
+  |                          |                                                                                 |
+  |                          |     <wps:ComplexData>                                                           |
+  |                          |          <cal:parameters>                                                       |
+  |                          |              <cal:compositingType>MOSAICKING</cal:compositingType>              |
+  |                          |              <cal:planetaryGrid>                                                |
+  |                          |                  org.esa.beam.binning.support.PlateCarreeGrid                   |
+  |                          |              </cal:planetaryGrid>                                               |
+  |                          |              <cal:numRows>21600</cal:numRows>                                   |
+  |                          |              <cal:superSampling>1</cal:superSampling>                           |
+  |                          |              <cal:maskExpr>!case2_flags.INVALID</cal:maskExpr>                  |
+  |                          |              <cal:aggregators>                                                  |
+  |                          |                  <cal:aggregator>                                               |
+  |                          |                      <cal:type>AVG</cal:type>                                   |
+  |                          |                      <cal:varName>tsm</cal:varName>                             |
+  |                          |                  </cal:aggregator>                                              |
+  |                          |                  <cal:aggregator>                                               |
+  |                          |                      <cal:type>MIN_MAX</cal:type>                               |
+  |                          |                      <cal:varName>chl_conc</cal:varName>                        |
+  |                          |                  </cal:aggregator>                                              |
+  |                          |                  <cal:aggregator>                                               |
+  |                          |                      <cal:type>AVG</cal:type>                                   |
+  |                          |                      <cal:varName>Z90_max</cal:varName>                         |
+  |                          |                  </cal:aggregator>                                              |
+  |                          |               </cal:aggregators>                                                |
+  |                          |          </cal:parameters>                                                      |
+  |                          |     </wps:ComplexData>                                                          |
   +--------------------------+---------------------------------------------------------------------------------+
   | outputFormat             | the desired format of the product. The options are listed in                    |
   |                          |                                                                                 |
-  |                          | describeProcess response.                                                       |
+  |                          | describeProcess response. *Sample value* :                                      |
+  |                          |                                                                                 |
+  |                          | - NetCDF4                                                                       |
+  |                          | - GeoTIFF                                                                       |
   +--------------------------+---------------------------------------------------------------------------------+
 
 
@@ -141,6 +199,7 @@ Result Retrieval
 
   The URL is generated automatically by the WPS and is available in the asynchronous execute response. Sample getStatus request URL:
   ::
+
     http://www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&Request=GetStatus&JobId=20160622085915_L2Plus_192611589de0f3
 
 
