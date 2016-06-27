@@ -4,7 +4,7 @@ Services
 
 The following shows interface diagram of Urban TEP components.
 
-.. include:: component_diagram.rst
+.. include:: interface_diagram.rst
 
 .. toctree::
    :maxdepth: 2
