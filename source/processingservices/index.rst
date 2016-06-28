@@ -2,10 +2,6 @@
 Processing service interfaces
 =============================
 
-#The following shows interface diagram of Urban TEP components.
-#
-#.. include:: interface_diagram.rst
-
 .. toctree::
    :maxdepth: 2
 
@@ -13,4 +9,3 @@ Processing service interfaces
    it4i/index
    dlr/index
    puma/index
-
