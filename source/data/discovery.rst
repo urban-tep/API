@@ -1,9 +1,0 @@
-
-Discovery
----------
-
-Discover public indices
-^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
