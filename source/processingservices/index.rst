@@ -1,6 +1,6 @@
 
-Processing service interfaces
-=============================
+Processing services
+===================
 
 .. toctree::
    :maxdepth: 2

@@ -1,6 +1,6 @@
 
-Portal user service interfaces
-====
+Data services
+=============
 
 .. toctree::
    :maxdepth: 2

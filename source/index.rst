@@ -9,14 +9,11 @@ Welcome to Urban Thematic Exploitation Platform API's documentation!
 .. toctree::
    :maxdepth: 2
 
-   intro/index
    overview/index
-   userservices/index
+   data/index
    processingservices/index
-   dataservices/index 
    development/index
    accounting/index
-   customerrelationship/index
    processingservices/appendix-a
    processingservices/appendix-b
 
