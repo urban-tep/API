@@ -1,6 +1,6 @@
 
 Accounting
-===========
+==========
 
 .. toctree::
    :maxdepth: 2

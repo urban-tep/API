@@ -10,10 +10,13 @@ Welcome to Urban Thematic Exploitation Platform API's documentation!
    :maxdepth: 2
 
    intro/index
-   data/index 
-   services/index
+   overview/index
+   userservices/index
+   processingservices/index
+   dataservices/index 
    development/index
    accounting/index
+   customerrelationship/index
    services/appendix-a
    services/appendix-b
 

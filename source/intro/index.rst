@@ -5,10 +5,15 @@ Introduction
 .. toctree::
    :maxdepth: 2
 
-Conventions
------------
+Purpose and scope
+-----------------
 
+References
+----------
 
-Terminology
------------
+Acronyms
+--------
+
+Document overview
+-----------------
 

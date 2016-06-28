@@ -5,8 +5,17 @@ Development
 .. toctree::
    :maxdepth: 2
 
-Service Descriptor XML
-^^^^^^^^^^^^^^^^^^^^^^
+Processor descriptor structure
+------------------------------
 
-Software Packaging (Docker)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Processor package structure
+---------------------------
+
+Upload command line interface
+-----------------------------
+
+Upload BC processing centre interface
+-------------------------------------
+
+Upload IT4I processing centre interface
+---------------------------------------
