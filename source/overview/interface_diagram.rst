@@ -1,5 +1,6 @@
 .. uml::
     :caption: Urban TEP Interface Diagram
+    :width: 16cm
     :align: center
 
     !include includes/skins.iuml

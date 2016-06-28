@@ -1,9 +1,27 @@
 
-Interface Overview
-==================
+Overview
+=========
 
 .. toctree::
    :maxdepth: 2
+
+Interface overview
+------------------
+
+The following diagram shows a logical view of the main external and internal interfaces of the Urban TEP.
+
+.. include:: interface_diagram.rst
+
+The main paths through the Urban TEP are:
+
+ - User information using the Web GUI from user to portal and the OpenSearch interface of the catalogue
+ - Processing using the Web GUI from user to portal and and further to the processing centres via the WPS interface
+ - Analysis and visualisation using the Web GUI from the user to the portal and further to PUMA where users have direct access to the analysis results
+ - Data interfaces between processing centres and data providers, and further via data gateway and portal to PUMA or the user
+ - Processor upload from the processor development environment to processing centres.
+
+There are additional interfaces for reporting and user relationship management and issue tracking. These interfaces are described in the following chapters.
+
 
 Urban Thematic Exploitation Platform concept
 --------------------------------------------
@@ -60,19 +78,4 @@ The portal is the frontend for the users where they will find the information pa
  
 The Urban TEP Processing Centres are based on slightly different architectures and with different Earth observation datasets and processing workflows available. The DLR processing centre is based on GeoFarm and a Calvalus processing system. The BC processing centre is based on Calvalus. And the IT4I processing centre is based on an HPC cluster. Nevertheless, the Urban TEP processing centres provide a uniform interface, concurrent processing on computer clusters, a common set of functions, and a uniform way to develop processors.
 
-Interface overview
-------------------
 
-The following diagram shows a logical view of the main external and internal interfaces of the Urban TEP.
-
-.. include:: interface_diagram.rst
-
-The main paths through the Urban TEP are:
-
- - User information using the Web GUI from user to portal and the OpenSearch interface of the catalogue
- - Processing using the Web GUI from user to portal and and further to the processing centres via the WPS interface
- - Analysis and visualisation using the Web GUI from the user to the portal and further to PUMA where users have direct access to the analysis results
- - Data interfaces between processing centres and data providers, and further via data gateway and portal to PUMA or the user
- - Processor upload from the processor development environment to processing centres.
-
-There are additional interfaces for reporting and user relationship management and issue tracking. These interfaces are described in the following chapters.
