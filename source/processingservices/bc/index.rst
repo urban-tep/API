@@ -1,6 +1,6 @@
 
-Brockmann Consult Provider
-==========================
+Brockmann Consult Processing centre interfaces
+==============================================
 
 .. toctree::
    :maxdepth: 2
