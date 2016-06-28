@@ -1,0 +1,3 @@
+[submodule "includes/t2-api"]
+	path = includes/t2-api
+	url = git@github.com:Terradue/api.git
