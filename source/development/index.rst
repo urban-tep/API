@@ -118,11 +118,11 @@ Example::
   threshold=0.2
   buffer=5
 
-In order to identify the result file(s) of processing the executable shall use the tag OUTPUT_PRODUCT at the beginning of a line, followed by the filename of the result. Several OUTPUT_PRODUCT lines can be used to identify several files as result. If the executable is a Bash script it may use
+In order to identify the result file(s) of processing the executable shall use the tag OUTPUT_PRODUCT at the beginning of a line, followed by the filename of the result. Several OUTPUT_PRODUCT lines can be used to identify several files as result. If the executable is a Bash script it may use::
 
   . $2
 
-to convert all parameters to environment variables available in the script, and
+to convert all parameters to environment variables available in the script, and::
 
   echo "OUTPUT_PRODUCT <result-file>"
 
