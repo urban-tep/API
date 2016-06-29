@@ -26,7 +26,12 @@ This service is invoked so that the portal has the information about services av
   +---------------------------+--------------------------------------------------------------------------------+
   | Element name              |  Description                                                                   |
   +===========================+================================================================================+
-  | wps:ProcessOfferings      | a list of available services                                                   |
+  | wps:ProcessOfferings      | a list of available services.                                                  |
+  |                           |                                                                                |
+  |                           | *Possible values* :                                                            |
+  |                           |                                                                                |
+  |                           | - urbantep-subsetting~1.0~Subset                                               |
+  |                           | - urbantep-fmask~3.2~Fmask8                                                    |
   +---------------------------+--------------------------------------------------------------------------------+
   | wps:Process               | information about a specific service. The :code:`identifier` tag is used in    |
   |                           |                                                                                |
