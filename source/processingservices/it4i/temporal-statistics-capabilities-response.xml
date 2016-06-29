@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:Capabilities xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en" service="WPS" version="1.0.0" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd">
+	<ows:ServiceIdentification>
+		<ows:Title>IT4I Web Processing Service - Server</ows:Title>
+		<ows:Abstract>WPS Processing Server run by the National Supercomputing Center IT4Innovations - the project Floreon+. Server is powered by Geoserver.</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>WPS</ows:Keyword>
+			<ows:Keyword>IT4I</ows:Keyword>
+			<ows:Keyword>Urban-TEP</ows:Keyword>
+			<ows:Keyword>processes</ows:Keyword>
+			<ows:Keyword>asynchronous</ows:Keyword>
+		</ows:Keywords>
+		<ows:ServiceType>WPS</ows:ServiceType>
+		<ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+		<ows:Fees>NONE</ows:Fees>
+		<ows:AccessConstraints>Authorized user only</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>IT4 Innovations</ows:ProviderName>
+		<ows:ProviderSite xlink:href="http://geoserver.org"/>
+		<ows:ServiceContact/>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+					<ows:Post xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeProcess">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+					<ows:Post xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Execute">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+					<ows:Post xlink:href="http://utep.it4i.cz:80/geoserver/wps"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<wps:ProcessOfferings>
+    <wps:Process wps:processVersion="1.0.0">
+			<ows:Identifier>gs:TemporalStatistics</ows:Identifier>
+			<ows:Title>TemporalStatistics</ows:Title>
+			<ows:Abstract>Temporal Statistics</ows:Abstract>
+		</wps:Process>
+	</wps:ProcessOfferings>
+	<wps:Languages>
+		<wps:Default>
+			<ows:Language>en-US</ows:Language>
+		</wps:Default>
+		<wps:Supported>
+			<ows:Language>en-US</ows:Language>
+		</wps:Supported>
+	</wps:Languages>
+</wps:Capabilities>
