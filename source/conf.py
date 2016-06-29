@@ -61,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Urban Thematic Exploitation Platform API'
-copyright = u'2016, Emmanuel Mathot (T2)\\Martin Boettcher (BC)\\Stepan Kuchar (IT4I)\\Julian Zeidler (DLR)'
+copyright = u'2016, TEP Urban Consortium'
 author = u'Emmanuel Mathot (T2)\\Martin Boettcher (BC)\\Stepan Kuchar (IT4I)\\Julian Zeidler (DLR)'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -260,7 +260,7 @@ latex_elements = {
 
      # Additional stuff for the LaTeX preamble.
      #
-     # 'preamble': '',
+     'preamble': '\\usepackage{sdd}',
 
      # Latex figure (float) alignment
      #
@@ -278,12 +278,12 @@ latex_documents = [
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #
-# latex_logo = None
+latex_logo = '_static/TEP_urban_logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
 #
-# latex_use_parts = False
+latex_use_parts = False
 
 # If true, show page references after internal links.
 #
