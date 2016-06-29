@@ -15,13 +15,16 @@ Expected header:
  
 Response (success):
 HTTP 200
-[{
+
+::
+
+  [{
    "id": "gufAnalysis",
    "description": "Combine Global Urban Footprint with Population data"
-}, {
+  }, {
    "id": "gsiAnalysis",
    "description": "Combine Global Settlements Inventory with Population data"
-}]
+  }]
 
 The response contains ids and descriptions of available process in an array.
 
@@ -38,7 +41,8 @@ Expected header:
 Response (success):
 HTTP 200
 
-.. code::
+::
+
   {
    "parameters": {
       "url": {
@@ -52,13 +56,16 @@ HTTP 200
  
 If the query succeeds, it returns the execution endpoint together with method and parameters. Every parameter contains information about whether it is required and what type is expected. 
 
- Response (error):
- HTTP 404
+Response (error):
+HTTP 404
+
+::
+
  {
    "message": "Process with given id doesn't exist"
  }
 
-This methos isn't implemented yet
+This method isn't implemented yet
 
 Processing Execution
 ^^^^^^^^^^^^^^^^^^^^
@@ -66,20 +73,30 @@ Processing Execution
 POST /integration/process
 
 Expected payload:
+
+::
+
  {
    "url": "{UrlOfTheGeotiffToProcess}"
  }
+
 Expected header:
  Content-Type: application/json; charset=utf-8
 
 Response (success):
 HTTP 200
+
+::
+
  {
    "id": "Uuid"
  }
 
 Response (error):
 HTTP 400
+
+::
+
  {
    "message": "error message"
  }
@@ -94,6 +111,9 @@ GET /integration/status?id={Uuid}
 
 Response (process finished):
 HTTP 200
+
+::
+
  {
    "status": "Finished",
    "sourceUrl": "{UrlOfTheGeotiffToProcess}",
@@ -102,6 +122,9 @@ HTTP 200
 
 Response (process underway - downloading file):
 HTTP 200
+
+::
+
  {
    "status": "Started",
    "sourceUrl": "{UrlOfTheGeotiffToProcess}",
@@ -110,6 +133,9 @@ HTTP 200
 
 Response (process underway - processing file):
 HTTP 200
+
+::
+
  {
    "status": "Processing",
    "sourceUrl": "{UrlOfTheGeotiffToProcess}",
@@ -118,6 +144,9 @@ HTTP 200
 
 Response (process failed):
 HTTP 200
+
+::
+
  {
    "status": "Error",
    "sourceUrl": "{UrlOfTheGeotiffToProcess}",
@@ -126,6 +155,9 @@ HTTP 200
 
 Response (request error):
 HTTP 400
+
+::
+
  {
    "message": "{error message}"
  }
