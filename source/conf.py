@@ -272,7 +272,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'UrbanThematicExploitationPlatformAPI.tex', u'Urban Thematic Exploitation Platform API Documentation',
-     u'Emmanuel Mathot (T2)\\textbackslash{}\\textbackslash{}Martin Boettcher (BC)\\textbackslash{}\\textbackslash{}Stepan Kuchar (IT4I)\\textbackslash{}\\textbackslash{}Julian Zeidler (DLR)', 'manual'),
+     r'Emmanuel Mathot (T2)\\Martin Boettcher (BC)\\Stepan Kuchar (IT4I)\\Jakub Balhar (GISAT)', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
