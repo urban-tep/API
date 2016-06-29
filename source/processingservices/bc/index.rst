@@ -90,16 +90,23 @@ This service is used by the portal to send a processing request to the WPS. The 
   +--------------------------+---------------------------------------------------------------------------------+
   | Parameter name           |  Description                                                                    |
   +==========================+=================================================================================+
+  | identifier               | the service_id of the processor.                                                |
+  |                          |                                                                                 |
+  |                          | *Possible values* :                                                             |
+  |                          |                                                                                 |
+  |                          | - urbantep-subsetting~1.0~Subset                                                |
+  |                          | - urbantep-fmask~3.2~Fmask8                                                     |
+  +--------------------------+---------------------------------------------------------------------------------+
   | productionName           | a name to identify this request. The value entered here will be used            |
   |                          |                                                                                 |
-  |                          | as the result file name. *Sample value* :                                       |
+  |                          | as the result file name. *Sample values* :                                      |
   |                          |                                                                                 |
   |                          | - Milano GUF                                                                    |
   |                          | - TEP Subset                                                                    |
   +--------------------------+---------------------------------------------------------------------------------+
   | inputDataSetName         | the value entered here is based on the option(s) listed in                      |
   |                          |                                                                                 |
-  |                          | describeProcess response. *Sample value* :                                      |
+  |                          | describeProcess response. *Sample values* :                                     |
   |                          |                                                                                 |
   |                          | - DLR GUF 12m Europe Tiles (Urban TEP)                                          |
   |                          | - LC-CCI GUF 300m Global                                                        |
@@ -108,7 +115,7 @@ This service is used by the portal to send a processing request to the WPS. The 
   |                          |                                                                                 |
   |                          | supported: Polygon and Bounding box (refer to describeProcess                   |
   |                          |                                                                                 |
-  |                          | response for more information). *Sample value* :                                |
+  |                          | response for more information). *Sample values* :                               |
   |                          |                                                                                 |
   |                          | - Polygon                                                                       |
   |                          |   ::                                                                            |
@@ -130,45 +137,20 @@ This service is used by the portal to send a processing request to the WPS. The 
   |                          |          </BoundingBoxData>                                                     |
   |                          |      </wps:Data>                                                                |
   +--------------------------+---------------------------------------------------------------------------------+
-  | calvalus.l3.parameters   | calvalus-specific parameters for L3 processing. When required,                  |
-  |                          |                                                                                 |
-  |                          | it will be indicated in describeProcess response and with a sample              |
-  |                          |                                                                                 |
-  |                          | values. *Sample value* :                                                        |
-  |                          | ::                                                                              |
-  |                          |                                                                                 |
-  |                          |     <wps:ComplexData>                                                           |
-  |                          |          <cal:parameters>                                                       |
-  |                          |              <cal:compositingType>MOSAICKING</cal:compositingType>              |
-  |                          |              <cal:planetaryGrid>                                                |
-  |                          |                  org.esa.beam.binning.support.PlateCarreeGrid                   |
-  |                          |              </cal:planetaryGrid>                                               |
-  |                          |              <cal:numRows>21600</cal:numRows>                                   |
-  |                          |              <cal:superSampling>1</cal:superSampling>                           |
-  |                          |              <cal:maskExpr>!case2_flags.INVALID</cal:maskExpr>                  |
-  |                          |              <cal:aggregators>                                                  |
-  |                          |                  <cal:aggregator>                                               |
-  |                          |                      <cal:type>AVG</cal:type>                                   |
-  |                          |                      <cal:varName>tsm</cal:varName>                             |
-  |                          |                  </cal:aggregator>                                              |
-  |                          |                  <cal:aggregator>                                               |
-  |                          |                      <cal:type>MIN_MAX</cal:type>                               |
-  |                          |                      <cal:varName>chl_conc</cal:varName>                        |
-  |                          |                  </cal:aggregator>                                              |
-  |                          |                  <cal:aggregator>                                               |
-  |                          |                      <cal:type>AVG</cal:type>                                   |
-  |                          |                      <cal:varName>Z90_max</cal:varName>                         |
-  |                          |                  </cal:aggregator>                                              |
-  |                          |               </cal:aggregators>                                                |
-  |                          |          </cal:parameters>                                                      |
-  |                          |     </wps:ComplexData>                                                          |
-  +--------------------------+---------------------------------------------------------------------------------+
   | outputFormat             | the desired format of the product. The options are listed in                    |
   |                          |                                                                                 |
-  |                          | describeProcess response. *Sample value* :                                      |
+  |                          | describeProcess response. *Sample values* :                                     |
   |                          |                                                                                 |
   |                          | - NetCDF4                                                                       |
   |                          | - GeoTIFF                                                                       |
+  +--------------------------+---------------------------------------------------------------------------------+
+  | minDate                  | the start date of the product in the format of YYYY-MM-dd.                      |
+  |                          |                                                                                 |
+  | (optional)               | *Sample value* : 2010-01-01                                                     |
+  +--------------------------+---------------------------------------------------------------------------------+
+  | maxDate                  | the end date of the product in the format of YYYY-MM-dd.                        |
+  |                          |                                                                                 |
+  | (optional)               | *Sample value* : 2016-06-01                                                     |
   +--------------------------+---------------------------------------------------------------------------------+
 
 
