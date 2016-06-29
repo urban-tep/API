@@ -15,13 +15,13 @@ Expected header:
  
 Response (success):
 HTTP 200
- [{
+[{
    "id": "gufAnalysis",
    "description": "Combine Global Urban Footprint with Population data"
- }, {
+}, {
    "id": "gsiAnalysis",
    "description": "Combine Global Settlements Inventory with Population data"
- }]
+}]
 
 The response contains ids and descriptions of available process in an array.
 
@@ -37,8 +37,10 @@ Expected header:
  
 Response (success):
 HTTP 200
- {
-    "parameters": {
+
+.. code::
+  {
+   "parameters": {
       "url": {
          "required": true,
          "type": "URL"
@@ -46,7 +48,7 @@ HTTP 200
    }
    "method": "POST",
    "execution": "/integration/process"
- }
+  }
  
 If the query succeeds, it returns the execution endpoint together with method and parameters. Every parameter contains information about whether it is required and what type is expected. 
 
