@@ -63,11 +63,88 @@ Protocol information: Descriptor XML files are used as parameter to package and 
 Processor package structure
 ---------------------------
 
+A processor prepared for packaging is a directory that consists of
+
+ * the runtime software of the processor in a subdirectory tree <package-name>-<package-version>, with shared libraries, scripts, auxiliary data, etc.
+ * as part of this a script to be called with the input product as command line argument (the one listed as processor/executable in the descriptor XML) 
+ * a Dockerfile (outside of the subdirectory) that sets up a basic operating system (e.g. centos:7) and installs additional libraries necessary for the processor
+ * a descriptor.xml file (outside of the subdirectory)
+
+Example::
+
+    myprocessor/fmask-3.2/fmask-and-merge.sh
+                         /Fmask
+                         /run_Fmask.sh
+                         /merge-graph.xml
+               /Dockerfile
+               /descriptor.xml
+
+This is the processing centre-independent structure of an Urban TEP processor.
+
+The packaging (see command line interface below) creates from this a processing centre-specific package zip file. This is the interface item to be uploaded from the development environment to the processing centre for deployment. For the BC processing centre it consists of
+
+ * a .tar.gz file with the content of the runtime processor directory tree
+ * a .tar.gz file that contains the Dockerfile
+ * a bundle-descriptor.xml file generated from the descriptor.xml, but specific to the BC processing centre
+ * a wrapper script generated from the descriptor.xml, adapter between Calvalus and the processor
+
+Example urbantep-fmask-3.2.zip::
+
+    Archive:  urbantep-fmask-3.2.zip
+      Length      Date    Time    Name
+    ---------  ---------- -----   ----
+      7793939  05-03-2016 15:38   urbantep-fmask-3.2.tar.gz
+          185  05-03-2016 15:38   urbantep-fmask-package-info.tar.gz
+         1401  05-03-2016 15:38   bundle-descriptor.xml
+          914  05-03-2016 15:38   Fmask8-process.vm
+    ---------                     -------
+      7796439                     4 files
+
 Upload command line interface
 -----------------------------
+
+The command line interface to package a processor prepared for packaging and to upload a processor package consists of two tools specific to the target processing centre. For the BC processing centre these are package-bc.sh and upload-bc.sh.
+
+  package-bc.sh <descriptor file>
+
+Example::
+
+  cd myprocessor
+  package-bc.sh descriptor.xml
+
+The upload command has the signature
+
+  upload-bc.sh <descriptor file>
+
+Example::
+
+  cd myprocessor
+  upload-bc.sh descriptor.xml
+
+The upload-bc.sh tool will ask for user name and password. The user must be registered with the respective processing centre.
+
+Note that these two tools use the structure of processors prepared for packaging defined above as interface item on the user side, and the processor package as interface item towards the processing centre. Behind the scenes the upload tool uses the upload BC processing centre interface defined next.
 
 Upload BC processing centre interface
 -------------------------------------
 
+The upload interface is a HTTP POST interface with authentication to upload processor package zip files to the BC procesing centre for automated deployment. Endpoint of the interface is
+
+  http://www.brockmann-consult.de:80/calvalus/calvalus/upload?dir0software&bundle=true
+
+The processor package zip file is to be provided as multipart/form-data .
+
+The challenge for user name and password shall use the cookie returned by the first request and authenticate at 
+
+  http://www.brockmann-consult.de:80/calvalus/j_secirity_check
+
+with POST message formatted as
+
+  j_username=<user-name>&j_password=<password>&submitBtn=Log+In
+
+
+
 Upload IT4I processing centre interface
 ---------------------------------------
+
+This interface is planned for a later version of the Urban TEP.
