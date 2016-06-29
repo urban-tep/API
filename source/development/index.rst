@@ -1,6 +1,6 @@
 
-Development
-===========
+Development environment interfaces
+==================================
 
 .. toctree::
    :maxdepth: 2
@@ -66,7 +66,7 @@ Processor package structure
 A processor prepared for packaging is a directory that consists of
 
  * the runtime software of the processor in a subdirectory tree <package-name>-<package-version>, with shared libraries, scripts, auxiliary data, etc.
- * as part of this a script to be called with the input product as command line argument (the one listed as processor/executable in the descriptor XML) 
+ * as part of this a script to be called with the input product as first command line argument (the one listed as processor/executable in the descriptor XML), and a parameters file as optional second argument (with key=value lines in it)
  * a Dockerfile (outside of the subdirectory) that sets up a basic operating system (e.g. centos:7) and installs additional libraries necessary for the processor
  * a descriptor.xml file (outside of the subdirectory)
 
@@ -99,6 +99,36 @@ Example urbantep-fmask-3.2.zip::
           914  05-03-2016 15:38   Fmask8-process.vm
     ---------                     -------
       7796439                     4 files
+
+Processor calling convention
+----------------------------
+
+At runtime the executable of the processor will be called in a working directory that contains the input file and where any intermediate files and the output can be placed. The calling signature is
+
+  <executable> <input-product> <parameters-file>
+
+Example::
+
+  fmask-3.2/fmask-and-merge.sh LC81840512016168LGN00.tgz parameters
+
+parameters is a file that contains one parameter per line as key=value
+
+Example::
+
+  threshold=0.2
+  buffer=5
+
+In order to identify the result file(s) of processing the executable shall use the tag OUTPUT_PRODUCT at the beginning of a line, followed by the filename of the result. Several OUTPUT_PRODUCT lines can be used to identify several files as result. If the executable is a Bash script it may use
+
+  . $2
+
+to convert all parameters to environment variables available in the script, and
+
+  echo "OUTPUT_PRODUCT <result-file>"
+
+to identify the result.
+
+Processors must not modify their runtime software directory tree in any way. They must only write to the working directory or may create subdirectories of the working directory. They do not need to clean up afterwards.
 
 Upload command line interface
 -----------------------------
