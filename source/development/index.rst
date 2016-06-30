@@ -166,7 +166,7 @@ The processor package zip file is to be provided as multipart/form-data .
 
 The challenge for user name and password shall use the cookie returned by the first request and authenticate at 
 
-  http://www.brockmann-consult.de:80/calvalus/j_secirity_check
+  http://www.brockmann-consult.de:80/calvalus/j_security_check
 
 with POST message formatted as
 
