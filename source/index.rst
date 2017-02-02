@@ -17,6 +17,7 @@ Welcome to Urban Thematic Exploitation Platform API's documentation!
    processingservices/appendix-a
    processingservices/appendix-b
    development/appendix-c
+   accounting/appendix-d
 
 
 Indices and tables

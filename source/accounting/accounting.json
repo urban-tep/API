@@ -1,0 +1,44 @@
+{
+  "id": "job_1484837520075_9999",
+  "account": {
+    "platform": "Brockmann Consult Processing Center",
+    "userName": "cvop",
+    "ref": "1738ad7b-534e-4aca-9861-b26fb9c0f983"
+  },
+  "compound": {
+    "id": "20170131154931_L2Plus_caa2e0dbce2b",
+    "name": "Subsetting of Urban Mask",
+    "type": "Subset",
+    "uri": "www.brockmann-consult.de/bc-wps/wps/calvalus?Service=WPS&Request=GetStatus&JobId=20170131154931_L2Plus_caa2e0dbce2b",
+    "timestamp": "25-01-2017T07:16:38Z"
+  },
+  "quantity": [
+    {
+      "id": "CPU_MILLISECONDS",
+      "value": 380040
+    },
+    {
+      "id": "PHYSICAL_MEMORY_BYTES",
+      "value": 825553920
+    },
+    {
+      "id": "BYTE_READ",
+      "value": 3432637
+    },
+    {
+      "id": "BYTE_WRITTEN",
+      "value": 319233
+    },
+    {
+      "id": "PROC_INSTANCE",
+      "value": 322482
+    },
+    {
+      "id": "NUM_REQ",
+      "value": 1
+    }
+  ],
+  "hostName": "www.brockmann-consult.de",
+  "timeStamp": "25-01-2017T09:06:38Z",
+  "status": "SUCCEEDED"
+}
