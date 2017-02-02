@@ -11,7 +11,7 @@ Appendix C : Development environment structures and examples
 Descriptor XML for example processor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. literalinclude:: bc/descriptor.xml
+.. literalinclude:: descriptor.xml
   :language: xml
 
 .. _UrbantepXSD:
@@ -19,5 +19,5 @@ Descriptor XML for example processor
 Descriptor XML Schema
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. literalinclude:: bc/urban-tep-schema.xsd
+.. literalinclude:: urban-tep-schema.xsd
   :language: xml
