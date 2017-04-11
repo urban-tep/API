@@ -1,6 +1,6 @@
 
-Development environment interfaces
-==================================
+Development API
+===============
 
 .. toctree::
    :maxdepth: 2
