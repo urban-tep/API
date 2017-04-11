@@ -1,10 +1,10 @@
 
-Accounting
-==========
+Accounting API
+==============
 
 .. toctree::
    :maxdepth: 2
 
-   records
-   post
-   get
+   ../external/t2api/source/accounting/concepts/index
+   ../external/t2api/source/accounting/record 
+   ../external/t2api/source/accounting/report
