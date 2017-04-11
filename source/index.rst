@@ -11,11 +11,11 @@ Welcome to Urban Thematic Exploitation Platform API's documentation!
 
    overview/index
    data/index
-   processingservices/index
+   production/index
    development/index
    accounting/index
-   processingservices/appendix-a
-   processingservices/appendix-b
+   production/processingservices/appendix-a
+   production/processingservices/appendix-b
    development/appendix-c
    accounting/appendix-d
 
