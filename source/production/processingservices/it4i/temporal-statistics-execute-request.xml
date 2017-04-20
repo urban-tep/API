@@ -1,22 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><wps:Execute version="1.0.0" service="WPS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/wps/1.0.0" xmlns:wfs="http://www.opengis.net/wfs" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" xmlns:wcs="http://www.opengis.net/wcs/1.1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<wps:Execute xmlns:ows="http://www.opengis.net/ows/1.1" service="WPS" version="1.0.0" xmlns:wps="http://www.opengis.net/wps/1.0.0">
   <ows:Identifier>gs:TemporalStatistics</ows:Identifier>
   <wps:DataInputs>
     <wps:Input>
       <ows:Identifier>productionName</ows:Identifier>
       <wps:Data>
-        <wps:LiteralData>test</wps:LiteralData>
+        <wps:LiteralData>TsTest</wps:LiteralData>
       </wps:Data>
     </wps:Input>
     <wps:Input>
       <ows:Identifier>maxCloudCover</ows:Identifier>
       <wps:Data>
-        <wps:LiteralData>25</wps:LiteralData>
+        <wps:LiteralData>25.0</wps:LiteralData>
       </wps:Data>
     </wps:Input>
     <wps:Input>
       <ows:Identifier>inputDataSet</ows:Identifier>
       <wps:Data>
-        <wps:LiteralData>Landsat_8_Level1</wps:LiteralData>
+        <wps:LiteralData>Landsat_8_Level_1</wps:LiteralData>
       </wps:Data>
     </wps:Input>
     <wps:Input>
@@ -34,16 +35,20 @@
     <wps:Input>
       <ows:Identifier>regionWkt</ows:Identifier>
       <wps:Data>
-        <wps:LiteralData>POLYGON ((-96.761475051669208 35.532897256625745,-96.687438784176777 35.523025754293599,-96.680857782621956 35.440763234857457,-96.723634292728661 35.450634737189773,-96.756539300503107 35.486830245741601,-96.761475051669208 35.532897256625745))</wps:LiteralData>
+        <wps:LiteralData>POLYGON((-96.761475051669208 35.532897256625745,-96.687438784176777 35.523025754293599,-96.680857782621956 35.440763234857457,-96.723634292728661 35.450634737189773,-96.756539300503107 35.486830245741601,-96.761475051669208 35.532897256625745))</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>options</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData></wps:LiteralData>
       </wps:Data>
     </wps:Input>
   </wps:DataInputs>
   <wps:ResponseForm>
     <wps:ResponseDocument storeExecuteResponse="true" status="true">
       <wps:Output>
-        <ows:Identifier>productionResults</ows:Identifier>
-        <ows:Title>productionResults</ows:Title>
-        <ows:Abstract>productionResults</ows:Abstract>
+        <ows:Identifier>result_metadata</ows:Identifier>
       </wps:Output>
     </wps:ResponseDocument>
   </wps:ResponseForm>

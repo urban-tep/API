@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wps:ExecuteResponse xml:lang="en" version="1.0.0" statusLocation="http://utep.it4i.cz:80/geoserver/ows?service=WPS&version=1.0.0&request=GetExecutionStatus&executionId=8c073e4a-55b4-459b-8175-f6ec64979ee8" serviceInstance="http://utep.it4i.cz:80/geoserver/ows?" service="WPS" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<wps:Process wps:processVersion="1.0.0">
-		<ows:Identifier>gs:TemporalStatistics</ows:Identifier>
-		<ows:Title>TemporalStatistics</ows:Title>
-		<ows:Abstract>Temporal Statistics</ows:Abstract>
-	</wps:Process>
-	<wps:Status creationTime="2016-05-23T15:26:52.546Z">
-		<wps:ProcessAccepted>Process accepted.</wps:ProcessAccepted>
-	</wps:Status>
+<wps:ExecuteResponse xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd" xml:lang="en" service="WPS" serviceInstance="http://utep.it4i.cz/geoserver/ows?" statusLocation="https://utep.it4i.cz/geoserver/ows?service=WPS&amp;version=1.0.0&amp;request=GetExecutionStatus&amp;executionId=76582c1c-c8a6-42ab-8ae3-e238c8584c86" version="1.0.0">
+  <wps:Process wps:processVersion="1.0.0">
+    <ows:Identifier>gs:TemporalStatistics</ows:Identifier>
+    <ows:Title>TemporalStatistics</ows:Title>
+    <ows:Abstract>Temporal Statistics</ows:Abstract>
+  </wps:Process>
+  <wps:Status creationTime="2017-04-20T07:12:40.413Z">
+    <wps:ProcessAccepted>Process accepted.</wps:ProcessAccepted>
+  </wps:Status>
 </wps:ExecuteResponse>

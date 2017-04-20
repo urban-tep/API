@@ -1,94 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wps:ProcessDescriptions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en" service="WPS" version="1.0.0" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd">
-	<ProcessDescription wps:processVersion="1.0.0" statusSupported="true" storeSupported="true">
-		<ows:Identifier>gs:TemporalStatistics</ows:Identifier>
-		<ows:Title>TemporalStatistics</ows:Title>
-		<ows:Abstract>Temporal Statistics</ows:Abstract>
-		<DataInputs>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>productionName</ows:Identifier>
-				<ows:Title>productionName</ows:Title>
-				<ows:Abstract>The name of the product. When not specified, a random unique name is generated</ows:Abstract>
-				<LiteralData>
-					<ows:AnyValue/>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>maxCloudCover</ows:Identifier>
-				<ows:Title>maxCloudCover</ows:Title>
-				<ows:Abstract>The maximum acceptable cloud cover per input image, [0,100]</ows:Abstract>
-				<LiteralData>
-					<ows:DataType>xs:float</ows:DataType>
-					<ows:AnyValue/>
-					<DefaultValue>25.0</DefaultValue>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>inputDataSet</ows:Identifier>
-				<ows:Title>inputDataSet</ows:Title>
-				<ows:Abstract>The input dataset required for the processing</ows:Abstract>
-				<LiteralData>
-					<ows:AllowedValues>
-						<ows:Value>Landsat_5_7_and_8_Level_1</ows:Value>
-						<ows:Value>Landsat_5_Level_1</ows:Value>
-						<ows:Value>Landsat_5_Level_1_including_ESA</ows:Value>
-						<ows:Value>Landsat_7_Level_1</ows:Value>
-						<ows:Value>Landsat_7_Level_1_including_ESA</ows:Value>
-						<ows:Value>Landsat_7_Level_1_including_SLC_off</ows:Value>
-						<ows:Value>Landsat_7_Level_1_including_SLC_off_and_ESA</ows:Value>
-						<ows:Value>Landsat_8_Level_1</ows:Value>
-						<ows:Value>Landsat_5_7_and_8_Level_1_including_ESA</ows:Value>
-						<ows:Value>Landsat_5_7_and_8_Level_1_including_SLC_off</ows:Value>
-						<ows:Value>Landsat_5_7_and_8_Level_1_including_SLC_off_and_ESA</ows:Value>
-					</ows:AllowedValues>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>minDate</ows:Identifier>
-				<ows:Title>minDate</ows:Title>
-				<ows:Abstract>The desired start date of the products in the format YYYY-MM-DD</ows:Abstract>
-				<LiteralData>
-					<ows:DataType>xs:dateTime</ows:DataType>
-					<ows:AnyValue/>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>maxDate</ows:Identifier>
-				<ows:Title>maxDate</ows:Title>
-				<ows:Abstract>The desired end date of the products in the format YYYY-MM-DD</ows:Abstract>
-				<LiteralData>
-					<ows:DataType>xs:dateTime</ows:DataType>
-					<ows:AnyValue/>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>regionWkt</ows:Identifier>
-				<ows:Title>regionWkt</ows:Title>
-				<ows:Abstract>The spatial range in the format of text. Example: POLYGON((100 -10,100 0,110 0,110 -10,100 -10))</ows:Abstract>
-				<LiteralData>
-					<ows:AnyValue/>
-				</LiteralData>
-			</Input>
-			<Input maxOccurs="1" minOccurs="0">
-				<ows:Identifier>regionBB</ows:Identifier>
-				<ows:Title>regionBB</ows:Title>
-				<ows:Abstract>The spatial range in the format of bounding box.</ows:Abstract>
-				<BoundingBoxData>
-					<Default>
-						<CRS>EPSG:4326</CRS>
-					</Default>
-					<Supported>
-						<CRS>EPSG:4326</CRS>
-					</Supported>
-				</BoundingBoxData>
-			</Input>
-		</DataInputs>
-		<ProcessOutputs>
-			<Output>
-				<ows:Identifier>productionResults</ows:Identifier>
-				<ows:Title>productionResults</ows:Title>
-				<LiteralOutput/>
-			</Output>
-		</ProcessOutputs>
-	</ProcessDescription>
+  <ProcessDescription wps:processVersion="1.0.0" statusSupported="true" storeSupported="true">
+    <ows:Identifier>gs:TemporalStatistics</ows:Identifier>
+    <ows:Title>TemporalStatistics</ows:Title>
+    <ows:Abstract>Temporal Statistics</ows:Abstract>
+    <DataInputs>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>productionName</ows:Identifier>
+        <ows:Title>productionName</ows:Title>
+        <ows:Abstract>The name of the product. When not specified, a random unique name is generated</ows:Abstract>
+        <LiteralData>
+          <ows:AnyValue/>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>maxCloudCover</ows:Identifier>
+        <ows:Title>maxCloudCover</ows:Title>
+        <ows:Abstract>The maximum acceptable cloud cover per input image, [0,100]</ows:Abstract>
+        <LiteralData>
+          <ows:DataType>xs:float</ows:DataType>
+          <ows:AnyValue/>
+          <DefaultValue>25.0</DefaultValue>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>inputDataSet</ows:Identifier>
+        <ows:Title>inputDataSet</ows:Title>
+        <ows:Abstract>The input dataset required for the processing</ows:Abstract>
+        <LiteralData>
+          <ows:AllowedValues>
+            <ows:Value>Landsat_5_7_and_8_Level_1</ows:Value>
+            <ows:Value>Landsat_5_Level_1</ows:Value>
+            <ows:Value>Landsat_5_Level_1_including_ESA</ows:Value>
+            <ows:Value>Landsat_7_Level_1</ows:Value>
+            <ows:Value>Landsat_7_Level_1_including_ESA</ows:Value>
+            <ows:Value>Landsat_7_Level_1_including_SLC_off</ows:Value>
+            <ows:Value>Landsat_7_Level_1_including_SLC_off_and_ESA</ows:Value>
+            <ows:Value>Landsat_8_Level_1</ows:Value>
+            <ows:Value>Landsat_5_7_and_8_Level_1_including_ESA</ows:Value>
+            <ows:Value>Landsat_5_7_and_8_Level_1_including_SLC_off</ows:Value>
+            <ows:Value>Landsat_5_7_and_8_Level_1_including_SLC_off_and_ESA</ows:Value>
+          </ows:AllowedValues>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>minDate</ows:Identifier>
+        <ows:Title>minDate</ows:Title>
+        <ows:Abstract>The desired start date of the products in the format YYYY-MM-DD</ows:Abstract>
+        <LiteralData>
+          <ows:DataType>xs:dateTime</ows:DataType>
+          <ows:AnyValue/>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>maxDate</ows:Identifier>
+        <ows:Title>maxDate</ows:Title>
+        <ows:Abstract>The desired end date of the products in the format YYYY-MM-DD</ows:Abstract>
+        <LiteralData>
+          <ows:DataType>xs:dateTime</ows:DataType>
+          <ows:AnyValue/>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>regionWkt</ows:Identifier>
+        <ows:Title>regionWkt</ows:Title>
+        <ows:Abstract>The spatial range in the format of text. Example: POLYGON((100 -10,100 0,110 0,110 -10,100 -10))</ows:Abstract>
+        <LiteralData>
+          <ows:AnyValue/>
+        </LiteralData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>regionBB</ows:Identifier>
+        <ows:Title>regionBB</ows:Title>
+        <ows:Abstract>The spatial range in the format of bounding box.</ows:Abstract>
+        <BoundingBoxData>
+          <Default>
+            <CRS>EPSG:4326</CRS>
+          </Default>
+          <Supported>
+            <CRS>EPSG:4326</CRS>
+          </Supported>
+        </BoundingBoxData>
+      </Input>
+      <Input maxOccurs="1" minOccurs="0">
+        <ows:Identifier>options</ows:Identifier>
+        <ows:Title>options</ows:Title>
+        <ows:Abstract>Optional parameters.</ows:Abstract>
+        <LiteralData>
+          <ows:AnyValue/>
+        </LiteralData>
+      </Input>
+    </DataInputs>
+    <ProcessOutputs>
+      <Output>
+        <ows:Identifier>result_metadata</ows:Identifier>
+        <ows:Title>result_metadata</ows:Title>
+        <ComplexOutput>
+          <Default>
+            <Format>
+              <MimeType>application/xml</MimeType>
+            </Format>
+          </Default>
+          <Supported>
+            <Format>
+              <MimeType>application/xml</MimeType>
+            </Format>
+          </Supported>
+        </ComplexOutput>
+      </Output>
+    </ProcessOutputs>
+  </ProcessDescription>
 </wps:ProcessDescriptions>

@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wps:ExecuteResponse xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" service="WPS" serviceInstance="http://utep.it4i.cz:80/geoserver/ows?" statusLocation="http://utep.it4i.cz:80/geoserver/ows?service=WPS&amp;version=1.0.0&amp;request=GetExecutionStatus&amp;executionId=a229e2a4-37f3-4d01-a132-c169b077be11" version="1.0.0">
-	<wps:Process wps:processVersion="1.0.0">
-		<ows:Identifier>gs:TemporalStatistics</ows:Identifier>
-		<ows:Title>TemporalStatistics</ows:Title>
-		<ows:Abstract>Temporal Statistics</ows:Abstract>
-	</wps:Process>
-	<wps:Status creationTime="2016-05-23T16:04:47.728Z">
-		<wps:ProcessSucceeded>Process succeeded.</wps:ProcessSucceeded>
-	</wps:Status>
-	<wps:ProcessOutputs>
-		<wps:Output>
-			<ows:Identifier>productionResults</ows:Identifier>
-			<ows:Title>URL for getting status of the submitted processing.</ows:Title>
-			<wps:Data>
-				<wps:LiteralData>http://utep.it4i.cz/results/10/LandsatDerivates_8_2015_2015_25_776391.isrv5.tif</wps:LiteralData>
-			</wps:Data>
-		</wps:Output>
-	</wps:ProcessOutputs>
+<wps:ExecuteResponse xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd" xml:lang="en" service="WPS" serviceInstance="http://utep.it4i.cz/geoserver/ows?" statusLocation="https://utep.it4i.cz/geoserver/ows?service=WPS&amp;version=1.0.0&amp;request=GetExecutionStatus&amp;executionId=76582c1c-c8a6-42ab-8ae3-e238c8584c86" version="1.0.0">
+  <wps:Process wps:processVersion="1.0.0">
+    <ows:Identifier>gs:TemporalStatistics</ows:Identifier>
+    <ows:Title>TemporalStatistics</ows:Title>
+    <ows:Abstract>Temporal Statistics</ows:Abstract>
+  </wps:Process>
+  <wps:Status creationTime="2017-04-20T07:12:40.413Z">
+    <wps:ProcessSucceeded>Process succeeded.</wps:ProcessSucceeded>
+  </wps:Status>
+  <wps:ProcessOutputs>
+    <wps:Output>
+      <ows:Identifier>result_metadata</ows:Identifier>
+      <ows:Title>OpenSearch Description to the Results</ows:Title>
+      <wps:Data>
+        <wps:ComplexData mimeType="application/xml">
+          <wps:Reference href="User authentication failed." method="GET" mimeType="application/atom+xml"/>
+          <wps:Reference href="https://utep.it4i.cz/results/svat_va/15/metadata.xml" method="GET" mimeType="application/atom+xml"/>
+        </wps:ComplexData>
+      </wps:Data>
+    </wps:Output>
+  </wps:ProcessOutputs>
 </wps:ExecuteResponse>
