@@ -14,7 +14,6 @@
       <ows:Title>OpenSearch Description to the Results</ows:Title>
       <wps:Data>
         <wps:ComplexData mimeType="application/xml">
-          <wps:Reference href="User authentication failed." method="GET" mimeType="application/atom+xml"/>
           <wps:Reference href="https://utep.it4i.cz/results/svat_va/15/metadata.xml" method="GET" mimeType="application/atom+xml"/>
         </wps:ComplexData>
       </wps:Data>
