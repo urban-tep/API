@@ -177,4 +177,16 @@ with POST message formatted as
 Upload IT4I processing centre interface
 ---------------------------------------
 
-This interface is planned for a later version of the Urban TEP.
+The upload interface is a HTTPS POST interface with authentication to upload processor package zip files to the IT4I procesing centre for manual deployment. Endpoint of the interface is
+
+  https://utep.it4i.cz/DevEnv/DevEnvService.svc/BundleUpload
+
+The processor package zip file is to be provided as multipart/form-data .
+
+The challenge for user name and password shall use the cookie returned by the first request and authenticate at 
+
+   https://utep.it4i.cz/DevEnv/DevEnvService.svc/AuthenticateUser
+
+with POST message containing JSON formatted as
+
+   {"jsonValues":{"username":"<username>","password":"<password>"}}
