@@ -15,6 +15,7 @@ Services Discovery
 
 - WPS getCapabilities
 
+See ../bc/index#services-discovery
 See http://docs.terradue.com/esa-tep-urban-api/production/processingservices/bc/index.html#services-discovery
 
 Service Description
