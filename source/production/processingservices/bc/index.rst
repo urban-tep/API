@@ -116,6 +116,14 @@ This service is used by the portal to send a processing request to the WPS. The 
   |                          | - DLR GUF 12m Europe Tiles (Urban TEP)                                          |
   |                          | - LC-CCI GUF 300m Global                                                        |
   +--------------------------+---------------------------------------------------------------------------------+
+  | minDate                  | the start date of the time series to process in the format of YYYY-MM-dd.       |
+  |                          |                                                                                 |
+  | (optional)               | *Sample value* : 2010-01-01                                                     |
+  +--------------------------+---------------------------------------------------------------------------------+
+  | maxDate                  | the end date of the time series to process in the format of YYYY-MM-dd.         |
+  |                          |                                                                                 |
+  | (optional)               | *Sample value* : 2016-06-01                                                     |
+  +--------------------------+---------------------------------------------------------------------------------+
   | regionWKT                | the spatial range of the processing. There are two formats that are             |
   |                          |                                                                                 |
   |                          | supported: Polygon and Bounding box (refer to describeProcess                   |
@@ -142,20 +150,42 @@ This service is used by the portal to send a processing request to the WPS. The 
   |                          |          </BoundingBoxData>                                                     |
   |                          |      </wps:Data>                                                                |
   +--------------------------+---------------------------------------------------------------------------------+
+  | spatio                   | optional spatial aggregation rules, as also provided as default in              |
+  |                          |                                                                                 |
+  | Temporal                 | describeProcess response. *Sample values* :                                     |
+  |                          |                                                                                 |
+  | Aggregation              | - empty : use defaults                                                          |
+  |                          | - false : do not aggregate, deliver tiles/scenes instead                        |
+  | Parameters               | - true : aggregate, use defaults for all other parameters                       |
+  |                          | - a number : aggregate, result shall have provided spatial resolution in meters |
+  |                          | - an XML expression                                                             |
+  |                          |   ::                                                                            |
+  |                          |                                                                                 |
+  |                          |      <spatioTemporalAggregationParameters>                                      |
+  |                          |        <aggregate>false</aggregate>                                             |
+  |                          |        <spatialResolution>60</spatialResolution>                                |
+  |                          |        <spatialRule>NEAREST</spatialRule>                                       |
+  |                          |        <temporalRules>FIRST</temporalRules>                                     |
+  |                          |        <variables>band_1</variables>                                            |
+  |                          |        <validPixelExpression>true</validPixelExpression>                        |
+  |                          |      </spatioTemporalAggregationParameters>                                     |
+  |                          |                                                                                 |
+  |                          | with                                                                            |
+  |                          |                                                                                 |
+  |                          | - aggregate : whether to compute a mosaic/composite, or to deliver tiles/scenes |
+  |                          | - spatialResolution : of the target product in meters, may be same as input     |
+  |                          | - spatialRule : one of NEAREST, BINNING                                         |
+  |                          | - temporalRules : one of FIRST, MIN_MAX, AVG, ON_MAX_SET(ndvi)                  |
+  |                          | - variables : band names to be aggregated (band_1 for GUF, ndvi... for Timescan |
+  |                          | - validPixelExpression : SNAP band maths expression, e.g. for cloud screening   |
+  +--------------------------+---------------------------------------------------------------------------------+
   | outputFormat             | the desired format of the product. The options are listed in                    |
   |                          |                                                                                 |
   |                          | describeProcess response. *Sample values* :                                     |
   |                          |                                                                                 |
+  |                          | - GeoTIFF-BigTIFF                                                               |
   |                          | - NetCDF4                                                                       |
   |                          | - GeoTIFF                                                                       |
-  +--------------------------+---------------------------------------------------------------------------------+
-  | minDate                  | the start date of the product in the format of YYYY-MM-dd.                      |
-  |                          |                                                                                 |
-  | (optional)               | *Sample value* : 2010-01-01                                                     |
-  +--------------------------+---------------------------------------------------------------------------------+
-  | maxDate                  | the end date of the product in the format of YYYY-MM-dd.                        |
-  |                          |                                                                                 |
-  | (optional)               | *Sample value* : 2016-06-01                                                     |
   +--------------------------+---------------------------------------------------------------------------------+
 
 
