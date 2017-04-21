@@ -50,3 +50,10 @@ Call::
 Entry for a cache to be monitored every 5 minutes. Deletes all tifs older than an hour in specific directory::
 
    */5 * * * * find /foo/bar/ -mmin +60 -name "*.tif" | xargs -I% rm %
+
+FTP based Push Service
+^^^^^^^^^^^^^^^^^^^^^^
+
+Push Services (e.g. ESA GPOD) publishing to a FTP Server can be managed via crontab and a simple sript
+
+:ref:`ftp`
