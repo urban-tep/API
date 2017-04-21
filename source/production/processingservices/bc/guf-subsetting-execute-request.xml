@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-
-<wps:Execute service="WPS"
+<wps:Execute xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd"
+             service="WPS"
              version="1.0.0"
              xmlns:wps="http://www.opengis.net/wps/1.0.0"
              xmlns:ows="http://www.opengis.net/ows/1.1"
->
+             xmlns:cal="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
     <ows:Identifier>urbantep-subsetting~1.0~Subset</ows:Identifier>
+
     <wps:DataInputs>
-        <wps:Input>
-            <ows:Identifier>productionType</ows:Identifier>
-            <wps:Data>
-                <wps:LiteralData>L2Plus</wps:LiteralData>
-            </wps:Data>
-        </wps:Input>
         <wps:Input>
             <ows:Identifier>productionName</ows:Identifier>
             <wps:Data>
-                <wps:LiteralData>TEP Subset test</wps:LiteralData>
+                <wps:LiteralData>GUF subset mosaic test</wps:LiteralData>
             </wps:Data>
         </wps:Input>
         <wps:Input>
             <ows:Identifier>inputDataSetName</ows:Identifier>
             <wps:Data>
-                <wps:LiteralData>
-                    DLR GUF 75m Global Tiles (Urban TEP)
-                </wps:LiteralData>
+                <wps:LiteralData>DLR GUF 75m Global 2012 (Urban TEP)</wps:LiteralData>
             </wps:Data>
         </wps:Input>
         <wps:Input>
             <ows:Identifier>regionWKT</ows:Identifier>
             <wps:Data>
-                <wps:LiteralData>
-                    POLYGON((100 -10,100 0,110 0,110 -10,100 -10))
-                </wps:LiteralData>
+                <wps:LiteralData>POLYGON((24.75 60.10,24.75 60.6,25.25 60.6,25.25 60.10,24.75 60.10))</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+<!--
+        <wps:Input>
+            <ows:Identifier>minDate</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData>2012-01-01</wps:LiteralData>
             </wps:Data>
         </wps:Input>
         <wps:Input>
+            <ows:Identifier>maxDate</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData>2012-12-31</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+-->
+        <wps:Input>
             <ows:Identifier>outputFormat</ows:Identifier>
             <wps:Data>
-                <wps:LiteralData>NetCDF4</wps:LiteralData>
+                <wps:LiteralData>GeoTIFF-BigTIFF</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>   
+        <wps:Input>
+            <ows:Identifier>spatioTemporalAggregationParameters</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData>75</wps:LiteralData>
             </wps:Data>
         </wps:Input>
     </wps:DataInputs>

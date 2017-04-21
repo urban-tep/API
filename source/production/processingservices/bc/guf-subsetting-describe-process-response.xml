@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<wps:ProcessDescriptions service="WPS" version="1.0.0" xml:lang="en"
-                         xsi:schemaLocation="http://www.opengis.net/wps/1.0.0
-                           http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd"
-                         xmlns:ows="http://www.opengis.net/ows/1.1"
-                         xmlns:wps="http://www.opengis.net/wps/1.0.0"
-                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:ProcessDescriptions service="WPS" version="1.0.0" xml:lang="en" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd" xmlns:bc="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
     <ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.0">
         <ows:Identifier>urbantep-subsetting~1.0~Subset</ows:Identifier>
         <ows:Title>urbantep-subsetting~1.0~Subset</ows:Title>
@@ -14,45 +8,34 @@
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>productionName</ows:Identifier>
                 <ows:Title>Production name</ows:Title>
-                <ows:Abstract>
-                    The name of the product. When not specified, a random unique name is generated
-                </ows:Abstract>
+                <ows:Abstract>User's reference of the production, should be unique, generated if left empty</ows:Abstract>
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AnyValue/>
                 </LiteralData>
             </Input>
             <Input minOccurs="0" maxOccurs="1">
-                <ows:Identifier>productionType</ows:Identifier>
-                <ows:Title>Production type</ows:Title>
-                <ows:Abstract>
-                    The type of the requested product. When not specified, L2Plus type is used
-                </ows:Abstract>
-                <LiteralData>
-                    <ows:DataType>string</ows:DataType>
-                    <ows:AllowedValues>
-                        <ows:Value>L2Plus</ows:Value>
-                    </ows:AllowedValues>
-                    <DefaultValue>L2Plus</DefaultValue>
-                </LiteralData>
-            </Input>
-            <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>inputDataSetName</ows:Identifier>
                 <ows:Title>Input data set name</ows:Title>
-                <ows:Abstract>The input dataset required for the processing</ows:Abstract>
+                <ows:Abstract>The input dataset the processor is applied to</ows:Abstract>
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AllowedValues>
-                        <ows:Value>DLR GUF 12m Europe Tiles (Urban TEP)</ows:Value>
-                        <ows:Value>DLR GUF 75m Global Tiles (Urban TEP)</ows:Value>
-                        <ows:Value>LC-CCI GUF 300m Global</ows:Value>
+                        <ows:Value>DLR GUF 12m Global 2012 (Urban TEP)</ows:Value>
+                        <ows:Value>DLR GUF 75m Global 2012 (Urban TEP)</ows:Value>
+                        <ows:Value>DLR Built-up Density 30m Global 2012 (Urban TEP)</ows:Value>
+                        <ows:Value>DLR Imperviousness 30m Bavaria 2000 (Urban TEP)</ows:Value>
+                        <ows:Value>LC-CCI Urban Layer 300m Tiles</ows:Value>
+                        <ows:Value>LC-CCI Urban Layer 300m Mosaic</ows:Value>
+                        <ows:Value>tep subset mosaic test</ows:Value>
+                        <ows:Value>tep subset mosaic test</ows:Value>
                     </ows:AllowedValues>
                 </LiteralData>
             </Input>
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>minDate</ows:Identifier>
                 <ows:Title>Date from</ows:Title>
-                <ows:Abstract>The desired start date of the product</ows:Abstract>
+                <ows:Abstract>Start date of period to be processed (leave empty if input is not a time series)</ows:Abstract>
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AnyValue/>
@@ -61,16 +44,7 @@
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>maxDate</ows:Identifier>
                 <ows:Title>Date to</ows:Title>
-                <ows:Abstract>The desired end date of the product</ows:Abstract>
-                <LiteralData>
-                    <ows:DataType>string</ows:DataType>
-                    <ows:AnyValue/>
-                </LiteralData>
-            </Input>
-            <Input minOccurs="0" maxOccurs="1">
-                <ows:Identifier>periodLength</ows:Identifier>
-                <ows:Title>Period length</ows:Title>
-                <ows:Abstract>The desired temporal range of the product</ows:Abstract>
+                <ows:Abstract>End date (inclusive) of the period to be processed (leave empty if input is not a time series)</ows:Abstract>
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AnyValue/>
@@ -79,10 +53,7 @@
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>regionWKT</ows:Identifier>
                 <ows:Title>Region WKT</ows:Title>
-                <ows:Abstract>
-                    The spatial range in the format of text.
-                    Example: POLYGON((100 -10,100 0,110 0,110 -10,100 -10))
-                </ows:Abstract>
+                <ows:Abstract>The spatial range in the format of text. Example: POLYGON((100 -10,100 0,110 0,110 -10,100 -10))</ows:Abstract>
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AnyValue/>
@@ -91,12 +62,7 @@
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>regionWKT</ows:Identifier>
                 <ows:Title>Region with bounding box</ows:Title>
-                <ows:Abstract>
-                    The spatial range in the format of bounding box.
-                    Use LowerCorner and UpperCorner (a pair of double values) to specify the box.
-                    Example: &lt;LowerCorner&gt;100.74453 -10.0000&lt;/LowerCorner&gt;&lt;
-                    UpperCorner&gt;110.25000 0.12443&lt;/UpperCorner&gt;
-                </ows:Abstract>
+                <ows:Abstract>The spatial range in the format of bounding box. Use LowerCorner and UpperCorner (a pair of double values) to specify the box. Example: &lt;LowerCorner&gt;100.74453 -10.0000&lt;/LowerCorner&gt;&lt;UpperCorner&gt;110.25000 0.12443&lt;/UpperCorner&gt;</ows:Abstract>
                 <BoundingBoxData>
                     <Default>
                         <CRS>urn:ogc:def:crs:EPSG:6:6:4326</CRS>
@@ -107,26 +73,23 @@
                 </BoundingBoxData>
             </Input>
             <Input minOccurs="0" maxOccurs="1">
-                <ows:Identifier>calvalus.l3.parameters</ows:Identifier>
-                <ows:Title>Specific Calvalus parameters for L3 processing</ows:Title>
-                <ComplexData>
-                    <Default>
-                        <Format>
-                            <MimeType>application/xml</MimeType>
-                            <Schema>
-                                http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd
-                            </Schema>
-                        </Format>
-                    </Default>
-                    <Supported>
-                        <Format>
-                            <MimeType>application/xml</MimeType>
-                            <Schema>
-                                http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd
-                            </Schema>
-                        </Format>
-                    </Supported>
-                </ComplexData>
+                <ows:Identifier>spatioTemporalAggregationParameters</ows:Identifier>
+                <ows:Title>Parameters for spatio-temporal aggregation</ows:Title>
+                <ows:Abstract>Parameters for spatio-temporal aggregation, optional, with defaults</ows:Abstract>
+                <LiteralData>
+                    <ows:DataType>string</ows:DataType>
+                    <ows:AnyValue/>
+                    <DefaultValue>
+        &lt;spatioTemporalAggregationParameters&gt;
+  &lt;aggregate&gt;false&lt;/aggregate&gt;
+  &lt;spatialResolution&gt;60&lt;/spatialResolution&gt;
+  &lt;spatialRule&gt;NEAREST&lt;/spatialRule&gt;
+  &lt;temporalRules&gt;FIRST&lt;/temporalRules&gt;
+  &lt;variables&gt;band_1&lt;/variables&gt;
+  &lt;validPixelExpression&gt;true&lt;/validPixelExpression&gt;
+&lt;/spatioTemporalAggregationParameters&gt;
+          </DefaultValue>
+                </LiteralData>
             </Input>
             <Input minOccurs="0" maxOccurs="1">
                 <ows:Identifier>outputFormat</ows:Identifier>
@@ -135,9 +98,11 @@
                 <LiteralData>
                     <ows:DataType>string</ows:DataType>
                     <ows:AllowedValues>
-                        <ows:Value>NetCDF4</ows:Value>
+                        <ows:Value>GeoTIFF-BigTIFF</ows:Value>
                         <ows:Value>GeoTIFF</ows:Value>
+                        <ows:Value>NetCDF4</ows:Value>
                     </ows:AllowedValues>
+                    <DefaultValue>GeoTIFF-BigTIFF</DefaultValue>
                 </LiteralData>
             </Input>
         </DataInputs>
