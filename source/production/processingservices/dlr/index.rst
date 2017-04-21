@@ -44,7 +44,8 @@ Managing Cache
 Processes whose products need to be cached can be monitored by a cronjob that deletes all remnants older than a given time
 
 Call::
-   crontab -e
+  
+  crontab -e
 
 Entry for a cache to be monitored every 5 minutes. Deletes all tifs older than an hour in specific directory::
 
