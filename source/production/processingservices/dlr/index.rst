@@ -15,7 +15,6 @@ Services Discovery
 
 - WPS getCapabilities
 
-See ../bc/index#services-discovery
 See http://docs.terradue.com/esa-tep-urban-api/production/processingservices/bc/index.html#services-discovery
 
 Service Description
@@ -39,3 +38,14 @@ Result Retrieval
 
 See http://docs.terradue.com/esa-tep-urban-api/production/processingservices/bc/index.html#result-status-retrieval
 
+Managing Cache
+^^^^^^^^^^^^^^
+
+Processes whose products need to be cached can be monitored by a cronjob that deletes all remnants older than a given time
+
+Call::
+   crontab -e
+
+Entry for a cache to be monitored every 5 minutes. Deletes all tifs older than an hour in specific directory::
+
+   */5 * * * * find /foo/bar/ -mmin +60 -name "*.tif" | xargs -I% rm %
