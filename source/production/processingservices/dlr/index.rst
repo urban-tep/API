@@ -54,6 +54,6 @@ Entry for a cache to be monitored every 5 minutes. Deletes all tifs older than a
 FTP based Push Service
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Push Services (e.g. ESA GPOD) publishing to a FTP Server can be managed via crontab and a simple sript
+Push Services (e.g. ESA GPOD) publishing to a FTP Server can be managed via crontab and a simple script
 
-:ref:`ftp`
+:ref:`ftp.py`
