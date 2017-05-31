@@ -160,7 +160,7 @@ Upload BC processing centre interface
 
 The upload interface is a HTTP POST interface with authentication to upload processor package zip files to the BC procesing centre for automated deployment. Endpoint of the interface is
 
-  http://www.brockmann-consult.de:80/calvalus/calvalus/upload?dir0software&bundle=true
+  http://www.brockmann-consult.de:80/calvalus/calvalus/upload?dir=software&bundle=true
 
 The processor package zip file is to be provided as multipart/form-data .
 
