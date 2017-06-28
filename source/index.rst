@@ -14,6 +14,7 @@ Welcome to Urban Thematic Exploitation Platform API's documentation!
    production/index
    development/index
    accounting/index
+   authentication/index
    production/processingservices/appendix-a
    production/processingservices/appendix-b
    development/appendix-c

@@ -9,3 +9,4 @@ Processing services
    it4i/index
    dlr/index
    puma/index
+   commonifc/index
