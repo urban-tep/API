@@ -78,7 +78,7 @@
 							<executable>pdflatex</executable>
 							<arguments>
 								<argument>-interaction=nonstopmode</argument>
-								<argument>UrbanTEP-API.tex</argument>
+								<argument>UrbanThematicExploitationPlatformAPI.tex</argument>
 							</arguments>
 							<successCodes>
                     <successCode>0</successCode>
@@ -97,7 +97,7 @@
 							<executable>pdflatex</executable>
 							<arguments>
 								<argument>-interaction=nonstopmode</argument>
-								<argument>UrbanTEP-API.tex</argument>
+								<argument>UrbanThematicExploitationPlatformAPI.tex</argument>
 							</arguments>
 							<successCodes>
                     <successCode>0</successCode>
@@ -116,7 +116,7 @@
 							<executable>pdflatex</executable>
 							<arguments>
 								<argument>-interaction=nonstopmode</argument>
-								<argument>UrbanTEP-API.tex</argument>
+								<argument>UrbanThematicExploitationPlatformAPI.tex</argument>
 							</arguments>
 							<successCodes>
                     <successCode>0</successCode>
